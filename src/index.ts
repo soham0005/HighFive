@@ -19,7 +19,7 @@ var mongoURI = process.env.MONGODB_CONNECT_URI;
 mongoose
   .connect(mongoURI)
   .then(() => console.log("CONNECTED TO MONGODB!"))
-  .catch((err:any) => console.error("Failed to Connect to MongoDB:", err));
+  .catch((err) => console.error("Failed to Connect to MongoDB:", err));
 
 app.use("/financial-records", financialRecordRouter);
 
