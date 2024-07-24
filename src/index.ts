@@ -1,10 +1,14 @@
-import express, { Express } from "express";
-import mongoose from "mongoose";
-import financialRecordRouter from "./routes/financial-records";
-import cors from "cors";
+
+
+const express = require("express");
+const mongoose = require("mongoose");
+const financialRecordRouter = require("./routes/financial-records");
+const cors = require("cors");
 
 require("dotenv").config();
-const app: Express = express();
+
+const app = express();
+
 const port = process.env.PORT || 3001;
 
 app.use(express.json());
